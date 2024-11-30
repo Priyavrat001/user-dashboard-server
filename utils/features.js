@@ -15,7 +15,9 @@ const TryCatch = (func)=>async(req, res, next)=>{
 
 
 const IsAuthenticated = TryCatch(async(req, res, next)=>{
-    const token = req.cookies["authToken"];
+    const token = req.cookies.authToken;
+
+    console.log(token)
 
     if(!token){
         return res.status(400).json({
