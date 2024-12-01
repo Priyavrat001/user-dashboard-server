@@ -23,7 +23,8 @@ app.use(
         origin: (origin, callback) => {
             const allowedOrigins = [
                 "http://localhost:5172",
-                "http://localhost:5173", // Add this
+                "http://localhost:5173",
+                "https://user-dashboard-frontend.netlify.app/login",
             ];
             if (!origin || allowedOrigins.includes(origin)) {
                 callback(null, true);
