@@ -25,7 +25,7 @@ app.use(
                 "http://localhost:5172",
                 "http://localhost:5173",
                 "https://user-dashboard-frontend.netlify.app",
-                "https://user-dashboard-client-mocha.vercel.app/",
+                process.env.CLIENT_URL
             ];
             if (!origin || allowedOrigins.includes(origin)) {
                 callback(null, true);
